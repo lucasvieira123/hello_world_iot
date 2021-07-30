@@ -9,8 +9,8 @@ const int PINO_ONEWIRE = 4; // Define pino do sensor temperatura
 const int NIVEL_PIN = 13; // ESP32 pin connected to button's pin
 
 // Replace with your network credentials
-const char* ssid = "2.4G";
-const char* password = "85142441";
+const char* ssid = "xxxxx"; // id wifi
+const char* password = "xxxxx";
 
 OneWire oneWire(PINO_ONEWIRE); // Cria um objeto OneWire
 DallasTemperature sensor(&oneWire); // Informa a referencia da biblioteca dallas temperature para Biblioteca onewire
@@ -21,7 +21,7 @@ PubSubClient mqttClient(wifiClient);
 #define MSG_BUFFER_SIZE  (70)
 char msg[MSG_BUFFER_SIZE];
 
-char *mqttServer = "192.168.1.12";
+char *mqttServer = "xxx.xxx.x.xx"; // local in my case
 int mqttPort = 1883;
 int last_time  = 0;
 char nivelString[11];
